@@ -1,11 +1,12 @@
 package com.example.restaurant_system_backend.auth.dto;
 
 import com.example.restaurant_system_backend.auth.User;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import com.example.restaurant_system_backend.restaurant.Restaurant;
 
-public record UserRequest(String username, String password, String role) {
+public record UserRequest(String username, String role, Restaurant restaurant) {
 
-    public User toEntity(PasswordEncoder passwordEncoder) {
-        return new User(username, passwordEncoder.encode(password), role);
+    // User 엔티티로 변환하는 메서드
+    public User toEntity(String encodedPassword) {
+        return new User(username, encodedPassword, role, restaurant);
     }
 }

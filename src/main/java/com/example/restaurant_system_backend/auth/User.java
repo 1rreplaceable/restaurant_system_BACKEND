@@ -1,14 +1,18 @@
 package com.example.restaurant_system_backend.auth;
 
+import com.example.restaurant_system_backend.restaurant.Restaurant;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@NoArgsConstructor
 @Table(name = "users")
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,11 +24,19 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String role; // 'ADMIN' or 'TABLE'
+    private String role; // 'TABLE' or 'ADMIN'
 
-    public User(String username, String password, String role) {
+    @ManyToOne
+    @JoinColumn(name = "restaurant_id", nullable = false)
+    private Restaurant restaurant;
+
+    public User(String username, String password, String role, Restaurant restaurant) {
         this.username = username;
         this.password = password;
         this.role = role;
+        this.restaurant = restaurant;
+    }
+
+    public User(String username, String encode, String role) {
     }
 }

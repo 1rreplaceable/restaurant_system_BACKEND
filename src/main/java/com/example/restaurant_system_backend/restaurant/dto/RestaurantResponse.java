@@ -1,4 +1,5 @@
 package com.example.restaurant_system_backend.restaurant.dto;
 
-public class RestaurantResponse {
-}
+public record RestaurantResponse(
+        String message
+) {}
