@@ -2,7 +2,6 @@ package com.example.restaurant_system_backend.auth;
 
 import com.example.restaurant_system_backend.auth.dto.LoginRequest;
 import com.example.restaurant_system_backend.auth.dto.LoginResponse;
-import com.example.restaurant_system_backend.auth.dto.UserRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

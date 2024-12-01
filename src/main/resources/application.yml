@@ -13,7 +13,7 @@ spring:
     enabled: true
 
 jwt:
-  secret: your-secret-key
+  secret: NjQyNzViMzQtNjk5YS00MjYwLTg2M2EtYWE5MjliMDdhMjZh
   expiration: 3600000 # 1 hour
 server:
   port: 8080
