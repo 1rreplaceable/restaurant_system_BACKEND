@@ -11,9 +11,5 @@ spring:
       hibernate.format_sql: true
   security:
     enabled: true
-
-jwt:
-  secret: NjQyNzViMzQtNjk5YS00MjYwLTg2M2EtYWE5MjliMDdhMjZh
-  expiration: 3600000 # 1 hour
 server:
   port: 8080
