@@ -1,4 +1,4 @@
-package com.example.restaurant_system_backend.restaurant;
+package com.example.restaurant_system_backend.restaurants;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -33,7 +33,7 @@ public class Restaurant {
 
     private String phone;
 
-    @CreationTimestamp // Hibernate가 자동으로 생성 시간 설정
+    @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 

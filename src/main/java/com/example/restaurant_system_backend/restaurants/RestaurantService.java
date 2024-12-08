@@ -1,10 +1,10 @@
-package com.example.restaurant_system_backend.restaurant;
+package com.example.restaurant_system_backend.restaurants;
 
 import com.example.restaurant_system_backend.auth.User;
 import com.example.restaurant_system_backend.auth.UserRepository;
 import com.example.restaurant_system_backend.auth.dto.UserRequest;
-import com.example.restaurant_system_backend.restaurant.dto.RestaurantRequest;
-import com.example.restaurant_system_backend.restaurant.dto.RestaurantResponse;
+import com.example.restaurant_system_backend.restaurants.dto.RestaurantRequest;
+import com.example.restaurant_system_backend.restaurants.dto.RestaurantResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

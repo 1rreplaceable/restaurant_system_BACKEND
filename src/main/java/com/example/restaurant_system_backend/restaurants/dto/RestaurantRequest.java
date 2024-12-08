@@ -1,6 +1,6 @@
-package com.example.restaurant_system_backend.restaurant.dto;
+package com.example.restaurant_system_backend.restaurants.dto;
 
-import com.example.restaurant_system_backend.restaurant.Restaurant;
+import com.example.restaurant_system_backend.restaurants.Restaurant;
 
 public record RestaurantRequest(
         String name,

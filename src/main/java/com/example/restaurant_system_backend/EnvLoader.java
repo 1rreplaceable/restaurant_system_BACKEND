@@ -6,7 +6,6 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 public class EnvLoader {
-
     public static Properties loadEnv() {
         Properties properties = new Properties();
         try {

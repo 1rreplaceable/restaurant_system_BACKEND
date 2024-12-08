@@ -1,4 +1,4 @@
-package com.example.restaurant_system_backend.restaurant;
+package com.example.restaurant_system_backend.restaurants;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

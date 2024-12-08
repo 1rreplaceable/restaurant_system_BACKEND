@@ -1,7 +1,7 @@
 package com.example.restaurant_system_backend.auth.dto;
 
 import com.example.restaurant_system_backend.auth.User;
-import com.example.restaurant_system_backend.restaurant.Restaurant;
+import com.example.restaurant_system_backend.restaurants.Restaurant;
 
 public record UserRequest(String username, String role, Restaurant restaurant) {
 

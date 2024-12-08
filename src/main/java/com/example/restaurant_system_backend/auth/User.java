@@ -1,6 +1,6 @@
 package com.example.restaurant_system_backend.auth;
 
-import com.example.restaurant_system_backend.restaurant.Restaurant;
+import com.example.restaurant_system_backend.restaurants.Restaurant;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
