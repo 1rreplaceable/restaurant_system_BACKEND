@@ -36,6 +36,9 @@ public class Menu {
     @Column(nullable = false)
     private boolean available = true;
 
+    @Column(name = "order_index")
+    private int orderIndex;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id", nullable = false)
     private Restaurant restaurant;
@@ -47,4 +50,15 @@ public class Menu {
     @UpdateTimestamp
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
+    public Menu(String name, int price, String category, String description, String imageUrl, boolean available, int orderIndex, Restaurant restaurant) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.available = available;
+        this.orderIndex = orderIndex;
+        this.restaurant = restaurant;
+    }
 }
