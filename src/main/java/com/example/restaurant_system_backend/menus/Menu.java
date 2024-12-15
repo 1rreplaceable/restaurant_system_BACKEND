@@ -1,5 +1,6 @@
 package com.example.restaurant_system_backend.menus;
 
+import com.example.restaurant_system_backend.categories.Category;
 import com.example.restaurant_system_backend.restaurants.Restaurant;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -24,9 +25,6 @@ public class Menu {
     @Column(nullable = false)
     private int price;
 
-    @Column(nullable = false)
-    private String category;
-
     @Column
     private String description;
 
@@ -35,6 +33,10 @@ public class Menu {
 
     @Column(nullable = false)
     private boolean available = true;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
 
     @Column(name = "order_index")
     private int orderIndex;
@@ -51,14 +53,4 @@ public class Menu {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-    public Menu(String name, int price, String category, String description, String imageUrl, boolean available, int orderIndex, Restaurant restaurant) {
-        this.name = name;
-        this.price = price;
-        this.category = category;
-        this.description = description;
-        this.imageUrl = imageUrl;
-        this.available = available;
-        this.orderIndex = orderIndex;
-        this.restaurant = restaurant;
-    }
 }

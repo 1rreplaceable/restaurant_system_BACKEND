@@ -33,6 +33,6 @@ public class AuthService {
 
         // JWT 토큰 생성
         String token = jwtService.generateToken(user.getUsername());
-        return new LoginResponse(token, user.getRole());
+        return new LoginResponse(token, user.getRole(), user.getRestaurant().getId());
     }
 }
