@@ -1,6 +1,5 @@
 package com.example.restaurant_system_backend.categories;
 
-import com.example.restaurant_system_backend.categories.dto.CategoryRequest;
 import com.example.restaurant_system_backend.restaurants.Restaurant;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor
-@Table(name = "Category")
+@Table(name = "Categories")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
